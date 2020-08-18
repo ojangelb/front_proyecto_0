@@ -1,1 +1,33 @@
-<p>detail works!</p>
+<h2>Detalles del Evento</h2>
+
+<hr/>
+<div *ngIf="event">
+    <div>
+        <label><b>Nombre: </b></label> {{event.event_name}}
+    </div>
+    <div>
+        <label><b>Categoria: </b></label> {{event.event_category}}
+    </div>
+    <div>
+        <label><b>Lugar: </b></label> {{event.event_place}}
+    </div>
+
+    <div>
+        <label><b>Direccion: </b></label> {{event.event_address}}
+    </div>
+    <div>
+        <label><b>Fecha Inicio: </b></label> {{event.event_initial_date}}
+    </div>
+
+    <div>
+        <label><b>Fecha Fin: </b></label> {{event.event_final_date}}
+    </div>
+
+    <div>
+        <label><b>Tipo de Evento: </b></label> {{event.event_type}}
+    </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Regresar</button><br>

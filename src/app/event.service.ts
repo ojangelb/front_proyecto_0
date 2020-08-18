@@ -8,7 +8,7 @@ import { baseUrl} from 'src/environments/environment';
 })
 export class EventService {
 
-  token =  'Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9qYW5nZWxiMSIsImlhdCI6MTU5Nzc1NTYzOSwiZXhwIjoxNTk3NzU5MjM5fQ.hbvk3pD2hytwVc2_A2Cpk-EKZ-qMTULmQkMxZtFNt3E';
+  token =  'Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9qYW5nZWxiMSIsImlhdCI6MTU5Nzc3OTA2OCwiZXhwIjoxNTk3NzgyNjY4fQ.v8yiSZjVICMPO4mPEucvBoM7RymRTMMjU7ADmM2kav0';
 
   requestOptions =  {
     headers: new HttpHeaders({

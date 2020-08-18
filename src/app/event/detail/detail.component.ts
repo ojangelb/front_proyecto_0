@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { EventService } from 'src/app/event.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Event } from '../event';
 
 @Component({
   selector: 'app-detail',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
+  id: string;
+  event: Event;
 
-  ngOnInit(): void {
+  constructor(private route: ActivatedRoute, private router: Router,
+              private eventService: EventService) { }
+
+  ngOnInit() {
+    this.event = new Event();
+
+    this.id = this.route.snapshot.params.id;
+
+    this.eventService.getEventId(this.id)
+      .subscribe(data => {
+        console.log(data);
+        this.event = data;
+      }, error => console.log(error));
   }
 
+  list(){
+    this.router.navigate(['event']);
+  }
 }
