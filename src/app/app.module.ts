@@ -18,6 +18,7 @@ import { DeleteComponent } from './event/delete/delete.component';
 import { GetComponent } from './event/get/get.component';
 import { UpdateComponent } from './event/update/update.component';
 import { EventComponent } from './event/event.component';
+import { DetailComponent } from './event/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { EventComponent } from './event/event.component';
     DeleteComponent,
     GetComponent,
     UpdateComponent,
-    EventComponent
+    EventComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
