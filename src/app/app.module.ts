@@ -15,7 +15,6 @@ import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddComponent } from './event/add/add.component';
 import { DeleteComponent } from './event/delete/delete.component';
-import { GetComponent } from './event/get/get.component';
 import { UpdateComponent } from './event/update/update.component';
 import { EventComponent } from './event/event.component';
 import { DetailComponent } from './event/detail/detail.component';
@@ -26,7 +25,6 @@ import { DetailComponent } from './event/detail/detail.component';
     LoginComponent,
     AddComponent,
     DeleteComponent,
-    GetComponent,
     UpdateComponent,
     EventComponent,
     DetailComponent
