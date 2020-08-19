@@ -1,0 +1,45 @@
+<mat-toolbar>
+    <span>Registro de Usuarios Empresa ABC</span>
+</mat-toolbar>
+
+<br>
+<div style="margin-left: 25px;">
+    <h3>Creacion de Usuarios</h3>
+    <div [hidden]="submitted" style="width: 400px; ">
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="name">Username</label>
+                <input type="text" class="form-control" id="username" required [(ngModel)]="user.username" name="username">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Nombres</label>
+                <input type="text" class="form-control" id="first_name" required [(ngModel)]="user.first_name" name="first_name">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Apellidos</label>
+                <input type="text" class="form-control" id="last_name" required [(ngModel)]="user.last_name" name="last_name">
+            </div>
+
+            <div class="form-group">
+                <label for="name">E-mail</label>
+                <input type="text" class="form-control" id="mail" required [(ngModel)]="user.email" name="mail">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Contraseña</label>
+                <input type="password" class="form-control" id="password" required [(ngModel)]="user.password" name="password">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Confirme Contraseña</label>
+                <input type="password" class="form-control" id="password1" required name="password1">
+            </div>
+
+
+
+            <button type="submit" class="btn btn-success">Crear Usuario</button>
+        </form>
+    </div>
+</div>

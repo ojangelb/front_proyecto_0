@@ -13,4 +13,8 @@ export class AuthServiceService {
     console.log('Loging...');
     return this.http.post(`${baseUrl}/api-auth/`, data);
   }
+
+  createEvent(user: Object): Observable<Object> {
+    return this.http.post(`${baseUrl}/create-user/`, user);
+  }
 }
