@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  private readonly JWT_TOKEN = 'JWT_TOKEN';
+
   formGroup: FormGroup;
   constructor(private authService: AuthServiceService, private router: Router) { }
 
@@ -27,8 +29,8 @@ export class LoginComponent implements OnInit {
       };
       this.authService.login(data).subscribe(result => {
         if (result.accessToken) {
-          console.log(result);
-          alert(result.message);
+          console.log(result.accessToken);
+          this.storeJwtToken(result.accessToken);
           this.router.navigate(['/event']);
         }
         else {
@@ -36,6 +38,14 @@ export class LoginComponent implements OnInit {
         }
       });
     }
+  }
+
+  private storeJwtToken(jwt: string) {
+    localStorage.setItem(this.JWT_TOKEN, jwt);
+  }
+
+  getJwtToken() {
+    return localStorage.getItem(this.JWT_TOKEN);
   }
 
   createUser() {
